@@ -1,0 +1,33 @@
+.main-sec {
+    background-image: linear-gradient(to right, red, orange);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    border-radius: 20px;
+}
+
+.main-sec-left h1 {
+    font-size: 48px;
+}
+
+.main-sec-left p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.main-sec-left button {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.main-sec-left button:hover {
+    background-color: rgb(184, 120, 0);
+}

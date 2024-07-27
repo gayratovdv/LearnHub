@@ -1,0 +1,80 @@
+.featured-courses,
+.how-it-works,
+.testimonials,
+.call-to-action {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.featured-courses h2,
+.how-it-works h2,
+.testimonials h2,
+.call-to-action h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.course-cards,
+.steps,
+.testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.course-card,
+.step,
+.testimonial-card {
+    background: #f4f4f4;
+    padding: 20px;
+    /* margin: 10px; */
+    border-radius: 10px;
+    width: 32%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.course-card img,
+.step img,
+.testimonial-card img {
+    width: 400px;
+    border-radius: 5px;
+    height: 250px;
+}
+
+.course-card h3,
+.step h3,
+.testimonial-card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.course-card p,
+.step p,
+.testimonial-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.testimonial-card p {
+    font-style: italic;
+}
+
+.course-card .btn,
+.call-to-action .btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}
+
+.course-card .btn:hover,
+.call-to-action .btn:hover {
+    background-color: #0056b3;
+}
