@@ -1,8 +1,10 @@
 import React from "react";
 import Container from "../Container/Container";
 import "./homesect.css";
+import { Link } from "react-router-dom";
 
-const MainSect = () => {
+const MainSect = ({ currentUser }) => {
+
   return (
     <Container>
       <div className="main-sec">
@@ -13,7 +15,7 @@ const MainSect = () => {
             ega bo'ling.
           </p>
           <button>Get Started</button>
-          <button>Browse Courses</button>
+          <button><Link to="/course_catalog">Browse Courses</Link></button>
         </div>
       </div>
     </Container>
