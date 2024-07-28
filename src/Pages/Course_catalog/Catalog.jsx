@@ -1,42 +1,39 @@
-import React from 'react'
-import Course from '../../components/Course/Course'
-import Category from '../../components/Category/Category'
-import Container from '../../components/Container/Container'
-import Navbar from '../../components/Navbar/Navbar'
-import Footer from '../../components/Footer/Footer'
+import React from "react";
+import Course from "../../components/Course/Course";
+import Category from "../../components/Category/Category";
+import Container from "../../components/Container/Container";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
-import english from "../../Assets/english course image.jpg"
-import frontEnd from "../../Assets/fron_end.jpg"
-import backEnd from "../../Assets/back_end.png"
-import motion from "../../Assets/pro motion course image.jpg"
-import threeD from "../../Assets/3D_design.webp"
-import UIUX from "../../Assets/UIUX_design.webp"
-import tester from "../../Assets/tester_course.jpg"
-import chess from "../../Assets/chess_course.jpg"
-import "./catalog.scss"
+import english from "../../Assets/english course image.jpg";
+import frontEnd from "../../Assets/fron_end.jpg";
+import backEnd from "../../Assets/back_end.png";
+import motion from "../../Assets/pro motion course image.jpg";
+import threeD from "../../Assets/3D_design.webp";
+import UIUX from "../../Assets/UIUX_design.webp";
+import tester from "../../Assets/tester_course.jpg";
+import chess from "../../Assets/chess_course.jpg";
+import "./catalog.scss";
 
 const Catalog = () => {
-  let priceInputs = document.getElementsByClassName("price-inp")
-  let lengthFunc = () =>{
-    let priceInput1Length = priceInputs[0].value.length
-    let priceInput2Length = priceInputs[1].value.length
+  let priceInputs = document.getElementsByClassName("price-inp");
+  let lengthFunc = () => {
+    let priceInput1Length = priceInputs[0].value.length;
+    let priceInput2Length = priceInputs[1].value.length;
 
-    if (priceInput1Length > 4){
-      priceInputs[0].value = priceInputs[0].value.slice(0, -1)
-      priceInputs[0].style.width = 90 + 12 * priceInputs[0].value.length + "px"
+    if (priceInput1Length > 4) {
+      priceInputs[0].value = priceInputs[0].value.slice(0, -1);
+      priceInputs[0].style.width = 90 + 12 * priceInputs[0].value.length + "px";
+    } else {
+      priceInputs[0].style.width = 90 + 12 * priceInput1Length + "px";
     }
-    else{
-      priceInputs[0].style.width = 90 + 12 * priceInput1Length + "px"
+    if (priceInput2Length > 4) {
+      priceInputs[1].value = priceInputs[1].value.slice(0, -1);
+      priceInputs[1].style.width = 90 + 12 * priceInputs[1].value.length + "px";
+    } else {
+      priceInputs[1].style.width = 90 + 12 * priceInput2Length + "px";
     }
-    if (priceInput2Length > 4){
-      priceInputs[1].value = priceInputs[1].value.slice(0, -1)
-      priceInputs[1].style.width = 90 + 12 * priceInputs[1].value.length + "px"
-    }
-    else{
-      priceInputs[1].style.width = 90 + 12 * priceInput2Length + "px"
-    }
-  }
-
+  };
 
   return (
     <main>
@@ -58,16 +55,16 @@ const Catalog = () => {
               <h2 className='discount' style={{color: "green"}}>50%</h2>
             </div>
           </div>
-      </Container>
+        </Container>
       </section>
       <section className="main-sect">
         <div className="categories">
-          <Category title="Dasturlash"/>
-          <Category title="Dizayn"/>
-          <Category title="Boshqa"/>
+          <Category title="Dasturlash" />
+          <Category title="Dizayn" />
+          <Category title="Boshqa" />
         </div>
         <div className="main-container">
-          <h1 className='main-title'>Bizning kurslarimiz</h1>
+          <h1 className="main-title">Bizning kurslarimiz</h1>
           <div className="courses">
             <Course search={english} title="Ingliz tili kursi" subtitle="Bu kursda siz o'zingizning ingliz tilingizni darajasini A1ga tushirasiz." price={300}/>
             <Course search={frontEnd} title="Front-end kursi" subtitle="Bu kursda siz dasturlashning Front-end qismini asoslariga o'rganasiz." price={600}/>
@@ -82,7 +79,7 @@ const Catalog = () => {
       </section>
       <Footer/>
     </main>
-  )
-}
+  );
+};
 
-export default Catalog
+export default Catalog;
