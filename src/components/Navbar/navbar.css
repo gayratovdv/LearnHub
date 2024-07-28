@@ -35,7 +35,7 @@
     display: flex;
     gap: 20px;
     .nav-btn {
-      background-color: rgb(149, 44, 44);
+      background-color: #952c2c;
       color: #fff;
       padding: 10px 20px;
       border: none;
