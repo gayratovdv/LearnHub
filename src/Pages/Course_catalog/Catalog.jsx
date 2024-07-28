@@ -48,7 +48,6 @@ const Catalog = () => {
         </div>
         <div className="search-container">
           <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
-          <div className="search-line"></div>
           <input type="text" className='search-inp'/>
         </div>
         <div className="discounts">

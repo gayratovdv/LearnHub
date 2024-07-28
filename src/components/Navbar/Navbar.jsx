@@ -1,23 +1,21 @@
 import "./navbar.css";
 import Container from "../Container/Container";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <Container>
       <div className="nav">
-        <a href="#"><img src="./favicon.ico" alt="navbar logo" /></a>
+        <Link to="/"><img src="./favicon.ico" alt="navbar logo" /></Link>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <a href="#course">Courses</a>
           </li>
           <li>
             <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
           </li>
         </ul>
         <div className="nav-content">

@@ -35,7 +35,7 @@
     display: flex;
     gap: 20px;
     .nav-btn {
-      background-color: #952c2c;
+      background-color: orange;
       color: #fff;
       padding: 10px 20px;
       border: none;
@@ -43,7 +43,7 @@
       cursor: pointer;
       transition: background-color 0.2s ease;
       &:hover {
-        background-color: red;
+        background-color: rgb(184, 120, 0);
       }
     }
   }
