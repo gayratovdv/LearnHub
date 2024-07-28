@@ -7,10 +7,15 @@
 .top-side{
     height: 80px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
     background-color: #dddddd;
+}
+
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
 }
 
 .discounts{
@@ -64,7 +69,7 @@
 
 .categories{
     width: 300px;
-    height: 74vh;
+    // height: 100%;
     background-color: #dddddd;
     display: flex;
     flex-direction: column;
@@ -85,7 +90,7 @@
 }
 
 .courses{
-    height: 61.5vh;
+    // height: 61.5vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

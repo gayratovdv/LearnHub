@@ -3,6 +3,7 @@ import Course from '../../components/Course/Course'
 import Category from '../../components/Category/Category'
 import Container from '../../components/Container/Container'
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 import english from "../../Assets/english course image.jpg"
 import frontEnd from "../../Assets/fron_end.jpg"
@@ -41,19 +42,23 @@ const Catalog = () => {
     <main>
       <Navbar/>
       <section className="top-side">
-        <div className="price-container">
-          <input min={1} style={{width: "90px"}} onChange={lengthFunc} type="number" className='price-inp'/>
-          -
-          <input min={1} style={{width: "90px"}} onChange={lengthFunc} type="number" className='price-inp'/>
-        </div>
-        <div className="search-container">
-          <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
-          <input type="text" className='search-inp'/>
-        </div>
-        <div className="discounts">
-          <i class="fa-solid fa-tags fa-2xl" style={{color: "red"}}></i>
-          <h2 className='discount' style={{color: "green"}}>50%</h2>
-        </div>
+        <Container>
+          <div className="top">
+            <div className="price-container">
+              <input min={1} style={{width: "90px"}} onChange={lengthFunc} type="number" className='price-inp'/>
+              -
+              <input min={1} style={{width: "90px"}} onChange={lengthFunc} type="number" className='price-inp'/>
+            </div>
+            <div className="search-container">
+              <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+              <input type="text" className='search-inp'/>
+            </div>
+            <div className="discounts">
+              <i class="fa-solid fa-tags fa-2xl" style={{color: "red"}}></i>
+              <h2 className='discount' style={{color: "green"}}>50%</h2>
+            </div>
+          </div>
+      </Container>
       </section>
       <section className="main-sect">
         <div className="categories">
@@ -75,6 +80,7 @@ const Catalog = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </main>
   )
 }
