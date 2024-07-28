@@ -1,94 +1,97 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.top-side{
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    background-color: #dddddd;
+.top {
+  background-color: #dddddd;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.discounts{
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.top-side {
+  display: flex;
+  align-items: center;
 }
 
-.price-container{
-    background-color: #cecece;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 40px;
-    font-size: 24px;
-    font-weight: bold;
+.discounts {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.price-inp{
-    padding: 10px 15px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    text-align: center;
-    font-size: 24px;
+.price-container {
+  background-color: #cecece;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.search-container{
-    width: 500px;
-    background-color: #cecece;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 15px;
-    border-radius: 30px;
+.price-inp {
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 24px;
 }
 
-.search-inp{
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 23px;
-    font-weight:700;
-    color: #575757;
+.search-container {
+  width: 500px;
+  background-color: #cecece;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+  border-radius: 30px;
 }
 
-.main-sect{
-    display: flex;
+.search-inp {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 23px;
+  font-weight: 700;
+  color: #575757;
 }
 
-.categories{
-    width: 300px;
-    height: 74vh;
-    background-color: #dddddd;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    padding: 10px;
-    margin: 3px;
-    border-radius: 10px;
+.main-sect {
+  display: flex;
+  margin-bottom: 40px;
 }
 
-.main-container{
-    width: 1213px;
+.categories {
+  width: 300px;
+  background-color: #dddddd;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px;
+  margin: 3px;
+  border-radius: 10px;
 }
 
-.main-title{
-    margin: 20px 0;
-    text-align: center; 
-    font-size: 48px;
+.main-container {
+  width: 1213px;
 }
 
-.courses{
-    height: 61.5vh;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    overflow-y: auto;
+.main-title {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 48px;
+}
+
+.courses {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow-y: auto;
 }
