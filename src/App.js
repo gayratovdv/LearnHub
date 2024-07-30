@@ -52,12 +52,7 @@ const App = () => {
         <Route
           path="/admin"
           element={
-            <AdminDashboard
-              courses={courses}
-              users={users}
-              addCourse={addCourse}
-              removeCourse={removeCourse}
-            />
+            <AdminDashboard courses={courses}users={users}addCourse={addCourse}removeCourse={removeCourse}/>
           }
         />
         <Route path="/about" element={<Error />} />
