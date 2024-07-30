@@ -82,6 +82,31 @@
   border-radius: 10px;
 }
 
+.category{
+  width: 100%;
+  background-color: #cecece;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.category-circle{
+  display: none;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.category-circle:hover{
+  background-color: #9b9b9b;
+}
+
 .main-container {
   width: 1213px;
 }
