@@ -9,7 +9,7 @@ const Course = (props) => {
                 <h4 className='title'>{props.title}</h4>
                 <p className='subtitle'>{props.subtitle}</p>
                 <h5 className={props.priceClass}>{props.price}$</h5>
-                <h5 className={discountClass}>{props.discount}$</h5>
+                <h5 className={props.discountClass}>{props.discount}$</h5>
             </div>
         </div>
     )
