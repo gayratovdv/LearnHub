@@ -15,7 +15,7 @@ const Navbar = () => {
             <Link to="/course_catalog">Courses</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="/about">About</Link>
           </li>
         </ul>
         <div className="nav-content">

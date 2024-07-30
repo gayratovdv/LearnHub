@@ -4,12 +4,13 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation
+  useLocation,
 } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import CourseCatalog from "./Pages/Course_catalog/Catalog"; // Assume you have another page
 import Loader from "./components/Loader/Loader";
-import Error from "./Pages/NotFound/Error"
+import Error from "./Pages/NotFound/Error";
+import AdminDashboard from "./Pages/AdminDashboard/Admin";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -22,13 +23,36 @@ const App = () => {
     return () => clearTimeout(timer);
   }, [location]);
 
+  const [courses, setCourses] = useState([]);
+  const [users, setUsers] = useState([]);
+
+  const addCourse = (newCourse) => {
+    setCourses([...courses, { ...newCourse, id: Date.now() }]);
+  };
+
+  const removeCourse = (courseId) => {
+    setCourses(courses.filter((course) => course.id !== courseId));
+  };
+
   return (
     <div>
       {loading && <Loader />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/course_catalog"element={<CourseCatalog />} />
-        <Route path="/*"  element={<Error />} />
+        <Route path="/course_catalog" element={<CourseCatalog />} />
+        <Route path="/*" element={<Error />} />
+        <Route
+          path="/admin"
+          element={
+            <AdminDashboard
+              courses={courses}
+              users={users}
+              addCourse={addCourse}
+              removeCourse={removeCourse}
+            />
+          }
+        />
+        <Route path="/about" element={<Error />} />
       </Routes>
     </div>
   );
