@@ -16,6 +16,7 @@ import "./catalog.scss";
 import { json } from "react-router-dom";
 
 const Catalog = () => {
+  let discount = 5
   const courses = [
     {
       id: 1,
@@ -24,6 +25,9 @@ const Catalog = () => {
       subtitle: "Bu kursda siz o'zingizning ingliz tilingizni darajasini pre-A1ga tushirasiz.",
       price: 0,
       category: "other",
+      priceClass: "price",
+      discountClass: "discount",
+      discount
     },
     {
       id: 2,
@@ -32,6 +36,9 @@ const Catalog = () => {
       subtitle: "Bu kursda siz dasturlashning Front-end qismini asoslariga o'rganasiz.",
       price: 600,
       category: "programming",
+      priceClass: "price",
+      discountClass: "discount",
+      discount
     },
     {
       id: 3,
@@ -40,6 +47,9 @@ const Catalog = () => {
       subtitle: "Bu kursda siz dasturlashning Back-end qismini asoslariga o'rganasiz.",
       price: 0,
       category: "programming",
+      priceClass: "price",
+      discountClass: "discount",
+      discount
     },
     {
       id: 4,
@@ -48,6 +58,9 @@ const Catalog = () => {
       subtitle: "Bu kursda siz motion dizaynning asoslariga o'rganmisiz.",
       price: 500,
       category: "design",
+      priceClass: "price",
+      discountClass: "discount",
+      discount
     },
     {
       id: 5,
@@ -56,22 +69,31 @@ const Catalog = () => {
       subtitle: "Bu kursda siz blenderda kubni o'chirishga o'rganasiz.",
       price: 0,
       category: "design",
+      priceClass: "price",
+      discountClass: "discount",
+      discount
     },
     {
       id: 6,
       image: UIUX,
       title: "UIUX dizayn kursi",
-      subtitle: "Bu kursda siz saytlarning dizaynini qilishga o'rganib bizni hakaton guruhimizda dizayner bo'lasiz.",
+      subtitle: "Bu kursda siz saytlarning dizaynini qilishga o'rganasiz.",
       price: 300,
       category: "design",
+      priceClass: "price",
+      discountClass: "discount",
+      discount
     },
     {
       id: 7,
       image: tester,
       title: "Tester kursi",
-      subtitle: "Bu kursda siz programistlarni o'zingizni topgan buglaringiz bilan zaybal qivorasiz.",
+      subtitle: "Bu kursda siz saytlarda xatolarni tpishga o'rganasiz.",
       price: 0,
       category: "other",
+      priceClass: "price",
+      discountClass: "discount",
+      discount
     },
     {
       id: 8,
@@ -80,8 +102,21 @@ const Catalog = () => {
       subtitle: "Bu kursda siz shaxmat yosh razrad 2ga ko'tarasiz.",
       price: 100,
       category: "other",
+      priceClass: "price",
+      discountClass: "discount",
+      discount
     },
   ];
+
+
+  for (let i = 0; i < courses.length; i++) {
+    if (courses[i].price >= 300) {
+      courses[i].priceClass = courses[i].priceClass + " price-discounted"
+      courses[i].discountClass = "discounted"
+      courses[i].discount = courses[i].price - courses[i].price / (100 / discount)
+    }
+  }
+
   const [query, setQuery] = useState('');
   let [category, setCategory] = useState("")
   let [checkbox, setCheckbox] = useState(false)
@@ -94,16 +129,13 @@ const Catalog = () => {
   };
 
   let filterFunc = (course) => {
-    console.log("__________________________________________________");
-    console.log(category);
-    console.log(typeof(category));
     if (checkbox) {
-      if (category.includes("programming") || category.includes("design") || category.includes("other")){
+      if (category.includes("programming") || category.includes("design") || category.includes("other")) {
         return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0
       }
       return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0
     }
-    else if (category.includes("programming") || category.includes("design") || category.includes("other")){
+    else if (category.includes("programming") || category.includes("design") || category.includes("other")) {
       return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase())
     }
     return course.title.toLowerCase().includes(query.toLowerCase())
@@ -122,7 +154,7 @@ const Catalog = () => {
               <i className="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
             </div>
             <div className="top-side__buttons">
-              <input  type="checkbox" onChange={() => {
+              <input type="checkbox" onChange={() => {
                 if (checkbox == false) setCheckbox(true)
                 else setCheckbox(false)
               }} />
@@ -130,7 +162,7 @@ const Catalog = () => {
             </div>
             <div className="discounts">
               <i className="fa-solid fa-tags fa-2xl" style={{ color: "red" }}></i>
-              <h2 className='discount' style={{ color: "white" }}></h2>
+              <h2 className='discount-title' style={{ color: "white" }}>{discount}%</h2>
             </div>
           </div>
         </Container>
@@ -194,12 +226,16 @@ const Catalog = () => {
           <h1 className="main-title">Bizning kurslarimiz</h1>
           <div className="courses">
             {filteredCourses.map(course => (
+
               <Course
-                key={course.id}
+                id={course.id}
                 search={course.image}
                 title={course.title}
                 subtitle={course.subtitle}
                 price={course.price}
+                priceClass={course.priceClass}
+                discount={course.discount}
+                discountClass={course.discountClass}
               />
             ))}
           </div>

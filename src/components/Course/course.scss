@@ -4,6 +4,7 @@
     height: 360px;
     padding: 10px;
     border-radius: 15px;
+    text-decoration: none;
 }
 
 .course-img{
@@ -18,17 +19,35 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color: black;
 }
 
 .title{
     font-size: 20px;
 }
 
-.price{
-    font-size: 18px;
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
     margin-top: auto;
 }
 
+.price{
+    font-size: 18px;
+}
+
+.price-discounted{
+    text-decoration: line-through;
+    color: #7c7c7c;
+    font-size: 14px;
+}
+
 .discount{
-    
+    display: none;
+}
+
+.discounted{
+    display: block;
+    font-size: 18px;
 }
