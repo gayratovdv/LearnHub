@@ -12,6 +12,16 @@ import threeD from "../../Assets/3D_design.webp";
 import UIUX from "../../Assets/UIUX_design.webp";
 import tester from "../../Assets/tester_course.jpg";
 import chess from "../../Assets/chess_course.jpg";
+
+import Info_page_1 from "../course_info_pages/Info_page_1.jsx";
+import Info_page_2 from "../course_info_pages/info_page_2.jsx";
+import Info_page_3 from "../course_info_pages/Info_page_3.jsx";
+import Info_page_4 from "../course_info_pages/Info_page_4.jsx";
+import Info_page_5 from "../course_info_pages/info_page_5.jsx";
+import Info_page_6 from "../course_info_pages/Info_page_6.jsx";
+import Info_page_7 from "../course_info_pages/Info_page_7.jsx";
+import Info_page_8 from "../course_info_pages/Info_page_8.jsx";
+
 import { json } from "react-router-dom";
 import "./catalog.scss";
 
@@ -116,6 +126,9 @@ const Catalog = () => {
       courses[i].discount = courses[i].price - courses[i].price / (100 / discount)
     }
   }
+  
+  console.log(Info_page_1().props.title)
+
 
   const [query, setQuery] = useState('');
   let [category, setCategory] = useState("")
@@ -226,7 +239,6 @@ const Catalog = () => {
           <h1 className="main-title">Bizning kurslarimiz</h1>
           <div className="courses">
             {filteredCourses.map(course => (
-
               <Course
                 id={course.id}
                 search={course.image}

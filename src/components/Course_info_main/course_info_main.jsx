@@ -16,7 +16,8 @@ const course_info_main = (props) => {
             <h4 className='info-subtitle'>{props.subtitle}</h4>
           </section>
           <div className="buy-container">
-            <h3 className='price'></h3>
+            <h3 className='price'>{props.price}$</h3>
+            <h3 className='discount'>{props.discount}$</h3>
             <button className='buy-btn'>Sotib olish</button>
           </div>
         </main>
