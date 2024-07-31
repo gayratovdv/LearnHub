@@ -11,6 +11,7 @@ import CourseCatalog from "./Pages/Course_catalog/Catalog"; // Assume you have a
 import Loader from "./components/Loader/Loader";
 import Error from "./Pages/NotFound/Error";
 import AdminDashboard from "./Pages/AdminDashboard/Admin";
+import About from "./Pages/About/About"
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -47,7 +48,7 @@ const App = () => {
             <AdminDashboard courses={courses}users={users}addCourse={addCourse}removeCourse={removeCourse}/>
           }
         />
-        <Route path="/about" element={<Error />} />
+        <Route path="/about" element={<About/>} />
       </Routes>
     </div>
   );
