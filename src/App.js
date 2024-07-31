@@ -12,6 +12,7 @@ import Loader from "./components/Loader/Loader";
 import Error from "./Pages/NotFound/Error";
 import AdminDashboard from "./Pages/AdminDashboard/Admin";
 import Info_page from "./Pages/Info_page/info_page.jsx";
+import Course from "./Pages/Course-page/Course.jsx";
  
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -50,6 +51,7 @@ const App = () => {
         />
         <Route path="/about" element={<Error />} />
         <Route path="/info_page" element={<Info_page />}/>
+        <Route path="/course" element={<Course/>}/>
       </Routes>
     </div>
   );
