@@ -7,7 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import CourseCatalog from "./Pages/Course_catalog/Catalog"; // Assume you have another page
+import CourseCatalog from "./Pages/Course_catalog/Catalog";
 import Loader from "./components/Loader/Loader";
 import Error from "./Pages/NotFound/Error";
 import AdminDashboard from "./Pages/AdminDashboard/Admin";
@@ -26,7 +26,7 @@ const App = () => {
 
   useEffect(() => {
     setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 1000); // Kechikishni kerakli holatda sozlang
+    const timer = setTimeout(() => setLoading(false), 500); // Kechikishni kerakli holatda sozlang
 
     return () => clearTimeout(timer);
   }, [location]);
