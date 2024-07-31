@@ -12,16 +12,6 @@ import threeD from "../../Assets/3D_design.webp";
 import UIUX from "../../Assets/UIUX_design.webp";
 import tester from "../../Assets/tester_course.jpg";
 import chess from "../../Assets/chess_course.jpg";
-
-import Info_page_1 from "../course_info_pages/Info_page_1.jsx";
-import Info_page_2 from "../course_info_pages/info_page_2.jsx";
-import Info_page_3 from "../course_info_pages/Info_page_3.jsx";
-import Info_page_4 from "../course_info_pages/Info_page_4.jsx";
-import Info_page_5 from "../course_info_pages/info_page_5.jsx";
-import Info_page_6 from "../course_info_pages/Info_page_6.jsx";
-import Info_page_7 from "../course_info_pages/Info_page_7.jsx";
-import Info_page_8 from "../course_info_pages/Info_page_8.jsx";
-
 import { json } from "react-router-dom";
 import "./catalog.scss";
 
@@ -37,7 +27,8 @@ const Catalog = () => {
       category: "other",
       priceClass: "price",
       discountClass: "discount",
-      discount
+      discount,
+      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
       id: 2,
@@ -48,7 +39,8 @@ const Catalog = () => {
       category: "programming",
       priceClass: "price",
       discountClass: "discount",
-      discount
+      discount,
+      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
       id: 3,
@@ -59,7 +51,8 @@ const Catalog = () => {
       category: "programming",
       priceClass: "price",
       discountClass: "discount",
-      discount
+      discount,
+      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
       id: 4,
@@ -70,7 +63,8 @@ const Catalog = () => {
       category: "design",
       priceClass: "price",
       discountClass: "discount",
-      discount
+      discount,
+      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
       id: 5,
@@ -81,7 +75,8 @@ const Catalog = () => {
       category: "design",
       priceClass: "price",
       discountClass: "discount",
-      discount
+      discount,
+      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
       id: 6,
@@ -92,7 +87,8 @@ const Catalog = () => {
       category: "design",
       priceClass: "price",
       discountClass: "discount",
-      discount
+      discount,
+      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
       id: 7,
@@ -103,7 +99,8 @@ const Catalog = () => {
       category: "other",
       priceClass: "price",
       discountClass: "discount",
-      discount
+      discount,
+      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
       id: 8,
@@ -114,10 +111,10 @@ const Catalog = () => {
       category: "other",
       priceClass: "price",
       discountClass: "discount",
-      discount
+      discount,
+      info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
   ];
-
 
   for (let i = 0; i < courses.length; i++) {
     if (courses[i].price >= 300) {
@@ -126,9 +123,6 @@ const Catalog = () => {
       courses[i].discount = courses[i].price - courses[i].price / (100 / discount)
     }
   }
-  
-  console.log(Info_page_1().props.title)
-
 
   const [query, setQuery] = useState('');
   let [category, setCategory] = useState("")
@@ -248,6 +242,7 @@ const Catalog = () => {
                 priceClass={course.priceClass}
                 discount={course.discount}
                 discountClass={course.discountClass}
+                info={course.info}
               />
             ))}
           </div>
