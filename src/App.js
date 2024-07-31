@@ -11,22 +11,10 @@ import CourseCatalog from "./Pages/Course_catalog/Catalog";
 import Loader from "./components/Loader/Loader";
 import Error from "./Pages/NotFound/Error";
 import AdminDashboard from "./Pages/AdminDashboard/Admin";
-<<<<<<< HEAD
 import Info_page from "./Pages/Info_page/info_page.jsx";
 import Course from "./Pages/Course-page/Course.jsx";
- 
-=======
 import About from "./Pages/About/About"
-import Info_page_1 from "./Pages/course_info_pages/Info_page_1.jsx";
-import Info_page_2 from "./Pages/course_info_pages/info_page_2.jsx";
-import Info_page_3 from "./Pages/course_info_pages/Info_page_3.jsx";
-import Info_page_4 from "./Pages/course_info_pages/Info_page_4.jsx";
-import Info_page_5 from "./Pages/course_info_pages/info_page_5.jsx";
-import Info_page_6 from "./Pages/course_info_pages/Info_page_6.jsx";
-import Info_page_7 from "./Pages/course_info_pages/Info_page_7.jsx";
-import Info_page_8 from "./Pages/course_info_pages/Info_page_8.jsx";
 
->>>>>>> 10ba88d971631684f8650a241f45d2c95e2e0a28
 const App = () => {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
@@ -62,21 +50,11 @@ const App = () => {
             <AdminDashboard courses={courses}users={users}addCourse={addCourse}removeCourse={removeCourse}/>
           }
         />
-<<<<<<< HEAD
-        <Route path="/about" element={<Error />} />
+        <Route path="/about" element={<About />} />
         <Route path="/info_page" element={<Info_page />}/>
         <Route path="/course" element={<Course/>}/>
-=======
         <Route path="/about" element={<About/>} />
-        <Route path="/course_info_1" element={<Info_page_1 />} />
-        <Route path="/course_info_2" element={<Info_page_2 />} />
-        <Route path="/course_info_3" element={<Info_page_3 />} />
-        <Route path="/course_info_4" element={<Info_page_4 />} />
-        <Route path="/course_info_5" element={<Info_page_5 />} />
-        <Route path="/course_info_6" element={<Info_page_6 />} />
-        <Route path="/course_info_7" element={<Info_page_7 />} />
-        <Route path="/course_info_8" element={<Info_page_8 />} />
->>>>>>> 10ba88d971631684f8650a241f45d2c95e2e0a28
+
       </Routes>
     </div>
   );
