@@ -11,6 +11,7 @@ import CourseCatalog from "./Pages/Course_catalog/Catalog";
 import Loader from "./components/Loader/Loader";
 import Error from "./Pages/NotFound/Error";
 import AdminDashboard from "./Pages/AdminDashboard/Admin";
+import About from "./Pages/About/About"
 import Info_page_1 from "./Pages/course_info_pages/Info_page_1.jsx";
 import Info_page_2 from "./Pages/course_info_pages/info_page_2.jsx";
 import Info_page_3 from "./Pages/course_info_pages/Info_page_3.jsx";
@@ -55,7 +56,7 @@ const App = () => {
             <AdminDashboard courses={courses}users={users}addCourse={addCourse}removeCourse={removeCourse}/>
           }
         />
-        <Route path="/about" element={<Error />} />
+        <Route path="/about" element={<About/>} />
         <Route path="/course_info_1" element={<Info_page_1 />} />
         <Route path="/course_info_2" element={<Info_page_2 />} />
         <Route path="/course_info_3" element={<Info_page_3 />} />
