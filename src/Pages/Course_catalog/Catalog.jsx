@@ -12,8 +12,8 @@ import threeD from "../../Assets/3D_design.webp";
 import UIUX from "../../Assets/UIUX_design.webp";
 import tester from "../../Assets/tester_course.jpg";
 import chess from "../../Assets/chess_course.jpg";
-import "./catalog.scss";
 import { json } from "react-router-dom";
+import "./catalog.scss";
 
 const Catalog = () => {
   let discount = 5

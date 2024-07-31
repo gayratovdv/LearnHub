@@ -8,8 +8,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 }
 
 .info-title{
     font-size: 56px;
+}
+
+.info-sect{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.info-img{
+    height: 300px;
 }

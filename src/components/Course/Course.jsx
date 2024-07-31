@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 
 const Course = (props) => {
     let toPage = "/course_info_" + props.id
-    console.log(toPage);
-    console.log(props.id);
     return (
         <Link className='course' to={toPage}>
             <img src={props.search} className='course-img' alt="img" />
