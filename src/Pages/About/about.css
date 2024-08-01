@@ -31,11 +31,7 @@ body {
     font-weight: 600;
     font-style: normal;
     font-size: 48px;
-}
-
-.section1 h2:hover{
-    background-image: linear-gradient(to left, rgba(255, 0, 0, 0.788), rgba(255, 166, 0, 0.788));
-    
+    border-radius: 20px;
 }
 
 .section__left p {
@@ -71,77 +67,6 @@ body {
     padding-left: 110px;
 }
 
-.section2 h2 {
-    text-align: center;
-    font-size: 48px;
-    color: white;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    text-align: center;
-    padding: 10px;
-    background-image: linear-gradient(to left, red, orange);
-    color: #fff;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.section2 h2:hover{
-    background-image: linear-gradient(to left, rgba(255, 0, 0, 0.788), rgba(255, 166, 0, 0.788));
-    
-}
-
-.section2 p{
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.slideshow {
-    position: relative;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-.slideshow img {
-    vertical-align: middle;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
 
 .prev, .next {
     cursor: pointer;
@@ -206,11 +131,7 @@ body {
     color: #fff;
     font-weight: 600;
     font-style: normal;
-}
-
-.section3 h2:hover{
-    background-image: linear-gradient(to left, rgba(255, 0, 0, 0.788), rgba(255, 166, 0, 0.788));
-    
+    border-radius: 20px;
 }
 
 .wrapper {
