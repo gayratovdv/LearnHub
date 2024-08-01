@@ -72,6 +72,10 @@
     border: none;
     outline: none;
     margin-top: 10px;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
 }
 
 .course-card .btn:hover,

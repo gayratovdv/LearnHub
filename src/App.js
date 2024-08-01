@@ -14,6 +14,7 @@ import AdminDashboard from "./Pages/AdminDashboard/Admin";
 import Info_page from "./Pages/Info_page/info_page.jsx";
 import Course from "./Pages/Course-page/Course.jsx";
 import About from "./Pages/About/About"
+import User from "./Pages/UserDashboard/User.jsx"
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -44,6 +45,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/course_catalog" element={<CourseCatalog />} />
         <Route path="/*" element={<Error />} />
+        <Route path="/user" element={<User />} />
         <Route
           path="/admin"
           element={

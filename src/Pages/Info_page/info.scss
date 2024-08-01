@@ -1,62 +1,138 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.info-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 50px;
+.info-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
 }
 
-.info-title{
-    font-size: 56px;
+.info-title {
+  font-size: 56px;
 }
 
-.info-sect{
-    display: flex;
-    align-items: center;
-    gap: 50px;
+.info-sect {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
-.info-img{
-    height: 300px;
-    border-radius: 10px;
+.info-img {
+  height: 300px;
+  border-radius: 10px;
 }
 
-.info-container{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.buy-container{
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.buy-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.buy-btn{
-    cursor: pointer;
-    background-color: orange;
-    margin-left: 25px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+.buy-btn {
+  cursor: pointer;
+  background-color: orange;
+  margin-left: 25px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  transition: transform ease 0.2s;
+  border: 2px solid transparent;
+}
+
+.buy-btn:hover {
+  transform: scale(1.05);
+}
+
+.buy-btn:active {
+  background-color: #fff;
+  color: orange;
+  border: 2px solid orange;
+}
+
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: linear-gradient(to left, red, orange);
+  padding: 30px 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  min-width: 300px;
+  h2 {
+    text-align: center;
+    font-size: 24px;
     color: #fff;
-    font-size: 20px;
-    transition: transform ease 0.2s;
+  }
 }
 
-.buy-btn:hover{
-    transform: scale(1.05);
+.modal-btns {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0 0 0;
 }
 
-.buy-btn:active{
-    background-color: #fff;
-    color: orange;
-    border: 2px solid orange;
+.modal-cancel,
+.modal-ok {
+  padding: 10px 15px;
+}
+
+.modal-cancel {
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.modal-ok {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
 }
