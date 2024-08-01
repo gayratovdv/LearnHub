@@ -3,8 +3,6 @@ import Course from "../../components/Course/Course";
 import Container from "../../components/Container/Container";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-
-import { json } from "react-router-dom";
 import "./catalog.scss";
 
 const Catalog = (props) => {
@@ -14,6 +12,7 @@ const Catalog = (props) => {
   const [query, setQuery] = useState('');
   let [category, setCategory] = useState("")
   let [checkbox, setCheckbox] = useState(false)
+  let [certificated, setCertificated] = useState(false)
 
   let categories = document.getElementsByClassName("category")
   let circles = document.getElementsByClassName("category-circle")
@@ -24,13 +23,16 @@ const Catalog = (props) => {
 
   let filterFunc = (course) => {
     if (checkbox) {
-      if (category.includes("programming") || category.includes("design") || category.includes("other")) {
-        return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0
+      if (certificated){
+        if (category.includes("programming") || category.includes("design") || category.includes("other")) {
+          return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0 && course.certificate
+        }
+        return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0 && certificated
       }
       return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0
     }
     else if (category.includes("programming") || category.includes("design") || category.includes("other")) {
-      return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase())
+      return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.certificate
     }
     return course.title.toLowerCase().includes(query.toLowerCase())
   }
@@ -79,7 +81,9 @@ const Catalog = (props) => {
               categories[0].style.background = "#cecece"
               circles[0].style.display = "none"
               console.log(category);
-            }} className="category-circle"><i class="fa-solid fa-xmark fa-2xs"></i></div>
+            }} className="category-circle">
+              <i class="fa-solid fa-xmark fa-2xs"></i>
+            </div>
           </div>
           <div onClick={() => {
             categories[1].style.background = "#bbb"
@@ -96,7 +100,9 @@ const Catalog = (props) => {
               setCategory(category.replace("design", "nothing"))
               categories[1].style.background = "#cecece"
               circles[1].style.display = "none"
-            }} className="category-circle"><i class="fa-solid fa-xmark fa-2xs"></i></div>
+            }} className="category-circle">
+              <i class="fa-solid fa-xmark fa-2xs"></i>
+            </div>
           </div>
           <div onClick={() => {
             categories[2].style.background = "#bbb"
@@ -113,7 +119,24 @@ const Catalog = (props) => {
               setCategory(category.replace("other", "nothing"))
               categories[2].style.background = "#cecece"
               circles[2].style.display = "none"
-            }} className="category-circle"><i class="fa-solid fa-xmark fa-2xs"></i></div>
+            }} className="category-circle">
+              <i class="fa-solid fa-xmark fa-2xs"></i>
+            </div>
+          </div>
+          <div onClick={() => {
+            categories[3].style.background = "#bbb"
+            circles[3].style.display = "flex"
+            setCertificated(true)
+          }} className="category">
+            <h3 className='category-title'>Sertifikatli</h3>
+            <div onClick={(e) => {
+              e.stopPropagation();
+              setCertificated(false)
+              categories[3].style.background = "#cecece"
+              circles[3].style.display = "none"
+            }} className="category-circle">
+              <i class="fa-solid fa-xmark fa-2xs"></i>
+            </div>
           </div>
         </div>
         <div className="main-container">

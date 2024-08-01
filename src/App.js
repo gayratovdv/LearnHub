@@ -28,7 +28,6 @@ import chess from "./Assets/chess_course.jpg";
 
 
 const App = () => {
-
   const globalCourses = [
     {
       id: 1,
@@ -39,6 +38,7 @@ const App = () => {
       category: "other",
       priceClass: "price",
       discountClass: "discount",
+      sertificate: false,
       discount: undefined,
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
@@ -52,6 +52,7 @@ const App = () => {
       priceClass: "price",
       discountClass: "discount",
       discount: undefined,
+      sertificate: true,
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
@@ -64,6 +65,7 @@ const App = () => {
       priceClass: "price",
       discountClass: "discount",
       discount: undefined,
+      sertificate: true,
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
@@ -76,6 +78,7 @@ const App = () => {
       priceClass: "price",
       discountClass: "discount",
       discount: undefined,
+      sertificate: true,
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
@@ -88,6 +91,7 @@ const App = () => {
       priceClass: "price",
       discountClass: "discount",
       discount: undefined,
+      sertificate: false,
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
@@ -100,6 +104,7 @@ const App = () => {
       priceClass: "price",
       discountClass: "discount",
       discount: undefined,
+      sertificate: true,
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
@@ -112,6 +117,7 @@ const App = () => {
       priceClass: "price",
       discountClass: "discount",
       discount: undefined,
+      sertificate: false,
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
     {
@@ -124,6 +130,7 @@ const App = () => {
       priceClass: "price",
       discountClass: "discount",
       discount: undefined,
+      sertificate: false,
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quos eos numquam? Aut autem alias veritatis possimus doloribus necessitatibus, unde sequi vitae non ipsa pariatur voluptate officiis, quasi, aliquam ea! Saepe molestias, tenetur quidem maiores blanditiis praesentium reprehenderit doloribus incidunt veniam doloremque! Ex aut ea amet, assumenda ad quas dolores repudiandae et necessitatibus, libero rem voluptates modi, quae corporis tempora. Explicabo ab, illum aperiam repellat necessitatibus odit minus cum nemo deserunt fugiat, harum exercitationem placeat rerum tenetur sunt veritatis quisquam voluptatibus aut a rem quam laborum. Dicta quos eaque saepe!"
     },
   ];
