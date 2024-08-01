@@ -5,7 +5,7 @@ import { Form, Link } from 'react-router-dom'
 const Course = (props) => {
     let toPage = "/info_page"
     let courseData = {
-        search: props.search,
+        image: props.image,
         title: props.title,
         subtitle: props.subtitle,
         price: props.price,
@@ -16,7 +16,7 @@ const Course = (props) => {
     }
     return (
         <Link className='course' to={toPage} state={{propsCourse: courseData}}>
-            <img src={courseData.search} className='course-img' alt="img" />
+            <img src={courseData.image} className='course-img' alt="img" />
             <div className="texts">
                 <h4 className='title'>{courseData.title}</h4>
                 <p className='subtitle'>{courseData.subtitle}</p>

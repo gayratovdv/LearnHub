@@ -345,7 +345,7 @@ const About = () => {
             <h2>Our team</h2>
             <div className="wrapper">
               <div className="wrapper__cards">
-                <input type="radio" name="slide" id="c1" defaultChecked />
+                <input className='input' type="radio" name="slide" id="c1" defaultChecked />
                 <label htmlFor="c1" className="wrapper__card">
                   <div className="row">
                     <div className="icon">1</div>
@@ -356,7 +356,7 @@ const About = () => {
                   </div>
                 </label>
 
-                <input type="radio" name="slide" id="c2" />
+                <input className='input' type="radio" name="slide" id="c2" />
                 <label htmlFor="c2" className="wrapper__card">
                   <div className="row">
                     <div className="icon">2</div>
@@ -367,7 +367,7 @@ const About = () => {
                   </div>
                 </label>
 
-                <input type="radio" name="slide" id="c3" />
+                <input className='input' type="radio" name="slide" id="c3" />
                 <label htmlFor="c3" className="wrapper__card">
                   <div className="row">
                     <div className="icon">3</div>
@@ -378,7 +378,7 @@ const About = () => {
                   </div>
                 </label>
 
-                <input type="radio" name="slide" id="c4" />
+                <input className='input' type="radio" name="slide" id="c4" />
                 <label htmlFor="c4" className="wrapper__card">
                   <div className="row">
                     <div className="icon">4</div>
@@ -389,7 +389,7 @@ const About = () => {
                   </div>
                 </label>
 
-                <input type="radio" name="slide" id="c5" />
+                <input className='input' type="radio" name="slide" id="c5" />
                 <label htmlFor="c5" className="wrapper__card">
                   <div className="row">
                     <div className="icon">5</div>
@@ -399,7 +399,7 @@ const About = () => {
                     </div>
                   </div>
                 </label>
-                <input type="radio" name="slide" id="c6" />
+                <input className='input' type="radio" name="slide" id="c6" />
                 <label htmlFor="c6" className="wrapper__card">
                   <div className="row">
                     <div className="icon">6</div>

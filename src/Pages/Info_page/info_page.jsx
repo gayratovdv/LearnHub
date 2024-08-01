@@ -15,7 +15,7 @@ let Info_page = () => {
                 <main className='info-main'>
                     <h1 className='info-title'>{propsCourse.propsCourse.title}</h1>
                     <section className="info-sect">
-                        <img className='info-img' src={propsCourse.propsCourse.search} alt="img" />
+                        <img className='info-img' src={propsCourse.propsCourse.image} alt="img" />
                         <div className="info-container">
                             <h4 className='info-subtitle'>{propsCourse.propsCourse.info}</h4>
                             <div className="buy-container">
