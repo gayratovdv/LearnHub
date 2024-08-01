@@ -12,10 +12,10 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#course">Courses</a>
+            <Link to="/course_catalog">Courses</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="/about">About</Link>
           </li>
         </ul>
         <div className="nav-content">

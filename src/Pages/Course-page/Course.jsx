@@ -1,11 +1,18 @@
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
+import Navbar from '../../components/Navbar/Navbar'
+import Container from '../../components/Container/Container'
 import "./course.scss"
 
 const Course = () => {
   return (
-    <div>
-      
-    </div>
+    <main>
+      <Navbar />
+      <Container>
+        
+      </Container>
+      <Footer />
+    </main>
   )
 }
 

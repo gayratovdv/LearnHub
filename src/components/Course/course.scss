@@ -1,0 +1,53 @@
+.course{
+    background-color: #ddd;
+    width: 23%;
+    height: 360px;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.course-img{
+    border-radius: 10px;
+    width: 100%;
+    height: 177px;
+}
+
+.texts{
+    height: 47%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: black;
+}
+
+.title{
+    font-size: 20px;
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+}
+
+.price{
+    font-size: 22px;
+}
+
+.price-discounted{
+    text-decoration: line-through;
+    color: #7c7c7c;
+    font-size: 16px;
+}
+
+.discount{
+    display: none;
+}
+
+.discounted{
+    display: block;
+    font-size: 22px;
+}
