@@ -8,17 +8,8 @@ import { json } from "react-router-dom";
 import "./catalog.scss";
 
 const Catalog = (props) => {
+  let discount = props.discount
   let courses = props.courses
-  
-  let discount = 5
-
-  for (let i = 0; i < courses.length; i++) {
-    if (courses[i].price >= 300) {
-      courses[i].priceClass = courses[i].priceClass + " price-discounted"
-      courses[i].discountClass = "discounted"
-      courses[i].discount = courses[i].price - courses[i].price / (100 / discount)
-    }
-  }
 
   const [query, setQuery] = useState('');
   let [category, setCategory] = useState("")

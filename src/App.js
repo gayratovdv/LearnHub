@@ -14,6 +14,8 @@ import AdminDashboard from "./Pages/AdminDashboard/Admin";
 import Info_page from "./Pages/Info_page/info_page";
 import Course from "./components/Course/Course";
 import About from "./Pages/About/About"
+import User from "./Pages/UserDashboard/User.jsx";
+import Contact from "./Pages/Contact/Contact.jsx";
 
 import english from "./Assets/english course image.jpg";
 import frontEnd from "./Assets/fron_end.jpg";
@@ -23,7 +25,10 @@ import threeD from "./Assets/3D_design.webp";
 import UIUX from "./Assets/UIUX_design.webp";
 import tester from "./Assets/tester_course.jpg";
 import chess from "./Assets/chess_course.jpg";
+
+
 const App = () => {
+
   const globalCourses = [
     {
       id: 1,
@@ -123,10 +128,18 @@ const App = () => {
     },
   ];
 
+  let discount = 5
+
+  for (let i = 0; i < globalCourses.length; i++) {
+    if (globalCourses[i].price >= 300) {
+      globalCourses[i].priceClass = globalCourses[i].priceClass + " price-discounted"
+      globalCourses[i].discountClass = "discounted"
+      globalCourses[i].discount = globalCourses[i].price - globalCourses[i].price / (100 / discount)
+    }
+  }
 
   const [loading, setLoading] = useState(false);
   const location = useLocation();
-
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => setLoading(false), 500); // Kechikishni kerakli holatda sozlang
@@ -149,24 +162,29 @@ const App = () => {
     <div>
       {loading && <Loader />}
       <Routes>
-        <Route path="/" element={<Home courses={globalCourses}/>} />
-        <Route path="/course_catalog" element={<CourseCatalog courses={globalCourses}/>} />
+        <Route path="/" element={<Home courses={globalCourses} />} />
+        <Route path="/course_catalog" element={<CourseCatalog courses={globalCourses} discount={discount} />} />
         <Route path="/*" element={<Error />} />
+        <Route path="/user" element={<User />} />
         <Route
           path="/admin"
           element={
-            <AdminDashboard courses={courses}users={users}addCourse={addCourse}removeCourse={removeCourse}/>
+            <AdminDashboard
+              courses={courses}
+              users={users}
+              addCourse={addCourse}
+              removeCourse={removeCourse}
+            />
           }
         />
+        <Route path="/info_page" element={<Info_page />} />
+        <Route path="/course" element={<Course />} />
         <Route path="/about" element={<About />} />
-        <Route path="/info_page" element={<Info_page />}/>
-        <Route path="/course" element={<Course/>}/>
-        <Route path="/about" element={<About/>} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
 };
-
 
 const AppWrapper = () => (
   <Router>

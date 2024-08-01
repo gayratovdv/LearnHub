@@ -7,8 +7,11 @@ import ProgramCourse from "../../Assets/programming course image.png";
 import ProMotionCourse from "../../Assets/pro motion course image.jpg";
 import "./home.css";
 import Footer from "../../components/Footer/Footer";
+import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = (props) => {
+  const courses = props.courses
+
   return (
     <div>
       <Navbar />
@@ -19,21 +22,21 @@ const Home = () => {
           <div class="course-cards">
             <div class="course-card">
               <img src={EnglishCourse} alt="Course 1" />
-              <h3>English Course</h3>
-              <p>Bu kursda siz ielts olaolasiz va ... .... ...</p>
-              <button className="btn">Enroll Now</button>
+              <h3>{courses[0].title}</h3>
+              <p>{courses[0].subtitle}</p>
+              <button className="btn"><Link to="/info_page" state={{propsCourse: courses[0]}}>Enroll Now</Link></button>
             </div>
             <div class="course-card">
               <img src={ProgramCourse} alt="Course 2" />
-              <h3>Programming Course</h3>
-              <p>Bu kursda siz dasturlashda Middle darajasigacham chiqasiz</p>
-              <button className="btn">Enroll Now</button>
+              <h3>{courses[1].title}</h3>
+              <p>{courses[1].subtitle}</p>
+              <button className="btn"><Link to="/info_page" state={{propsCourse: courses[1]}}>Enroll Now</Link></button>
             </div>
             <div class="course-card">
               <img src={ProMotionCourse} alt="Course 3" />
-              <h3>Pro Motion Course</h3>
-              <p>Bu kursda siz 0 dan Pro Motion Kursini o'rganasiz</p>
-              <button className="btn">Enroll Now</button>
+              <h3>{courses[3].title}</h3>
+              <p>{courses[3].subtitle}</p>
+              <button className="btn"><Link to="/info_page" state={{propsCourse: courses[3]}}>Enroll Now</Link></button>
             </div>
           </div>
         </Container>
