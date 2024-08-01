@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import Container from '../../components/Container/Container'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
