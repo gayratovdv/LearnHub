@@ -30,7 +30,12 @@
 .info-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
+}
+
+.info-certificate{
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .buy-container {

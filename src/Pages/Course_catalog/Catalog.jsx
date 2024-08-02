@@ -27,12 +27,21 @@ const Catalog = (props) => {
         if (category.includes("programming") || category.includes("design") || category.includes("other")) {
           return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0 && course.certificate
         }
-        return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0 && certificated
+        return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0 && course.certificate
+      }
+      else if (category.includes("programming") || category.includes("design") || category.includes("other")) {
+        return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0
       }
       return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0
     }
     else if (category.includes("programming") || category.includes("design") || category.includes("other")) {
-      return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.certificate
+      if (certificated){
+        return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.certificate
+      }
+      return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase())
+    }
+    else if (certificated){
+      return course.title.toLowerCase().includes(query.toLowerCase()) && course.certificate
     }
     return course.title.toLowerCase().includes(query.toLowerCase())
   }
@@ -152,6 +161,7 @@ const Catalog = (props) => {
                 priceClass={course.priceClass}
                 discount={course.discount}
                 discountClass={course.discountClass}
+                certificate={course.certificate}
                 info={course.info}
               />
             ))}

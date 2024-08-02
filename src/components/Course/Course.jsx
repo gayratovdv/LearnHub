@@ -3,7 +3,6 @@ import "./course.scss"
 import { Form, Link } from 'react-router-dom'
 
 const Course = (props) => {
-    let toPage = "/info_page"
     let courseData = {
         image: props.image,
         title: props.title,
@@ -12,10 +11,11 @@ const Course = (props) => {
         priceClass: props.priceClass,
         discount: props.discount,
         discountClass: props.discountClass,
+        certificate: props.certificate,
         info: props.info,
     }
     return (
-        <Link className='course' to={toPage} state={{propsCourse: courseData}}>
+        <Link className='course' to={"/info_page"} state={{propsCourse: courseData}}>
             <img src={courseData.image} className='course-img' alt="img" />
             <div className="texts">
                 <h4 className='title'>{courseData.title}</h4>

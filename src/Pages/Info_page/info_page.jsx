@@ -9,6 +9,15 @@ let Info_page = () => {
   let location = useLocation();
   let propsCourse = location.state;
 
+  let certificate = propsCourse.propsCourse.certificate
+
+  if (certificate) certificate = "Sertifikat beriladi"
+  else certificate = ""
+  console.log(propsCourse.propsCourse.certificate);
+  
+  console.log(certificate);
+  
+
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -34,6 +43,7 @@ let Info_page = () => {
             />
             <div className="info-container">
               <h4 className="info-subtitle">{propsCourse.propsCourse.info}</h4>
+              <h5 className="info-certificate">{certificate}</h5>
               <div className="buy-container">
                 <h3 className={propsCourse.propsCourse.priceClass}>
                   {propsCourse.propsCourse.price}$
