@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { TbCertificate } from "react-icons/tb";
 import Container from "../../components/Container/Container";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
@@ -8,15 +9,17 @@ import "./info.scss";
 let Info_page = () => {
   let location = useLocation();
   let propsCourse = location.state;
-
   let certificate = propsCourse.propsCourse.certificate
 
-  if (certificate) certificate = "Sertifikat beriladi"
-  else certificate = ""
-  console.log(propsCourse.propsCourse.certificate);
-  
-  console.log(certificate);
-  
+  let certificateContainer = useRef()
+
+  useEffect(() =>{ 
+    if (!certificate) {
+      certificateContainer.current.style.display = "none"
+    }
+    console.log(certificate);
+    
+  }, [])
 
   const [modal, setModal] = useState(false);
 
@@ -43,7 +46,10 @@ let Info_page = () => {
             />
             <div className="info-container">
               <h4 className="info-subtitle">{propsCourse.propsCourse.info}</h4>
-              <h5 className="info-certificate">{certificate}</h5>
+              <div ref={certificateContainer} className="certificate-container">
+                <h5 className="certificate-title">Sertifikat beriladi</h5>
+                <TbCertificate className="certificate-icon"/>
+              </div>
               <div className="buy-container">
                 <h3 className={propsCourse.propsCourse.priceClass}>
                   {propsCourse.propsCourse.price}$

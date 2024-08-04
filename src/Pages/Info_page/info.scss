@@ -33,15 +33,27 @@
   gap: 20px;
 }
 
-.info-certificate{
-  font-size: 20px;
-  font-weight: 700;
-}
-
 .buy-container {
   display: flex;
   align-items: center;
   gap: 5px;
+  position: relative;
+}
+
+.certificate-container{
+  display: flex;
+  align-items: center;  
+  gap: 10px;
+}
+
+.certificate-title{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.certificate-icon{
+  width: 50px;
+  height: 50px;
 }
 
 .buy-btn {

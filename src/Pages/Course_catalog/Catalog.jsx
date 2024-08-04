@@ -13,37 +13,29 @@ const Catalog = (props) => {
   let [category, setCategory] = useState("")
   let [checkbox, setCheckbox] = useState(false)
   let [certificated, setCertificated] = useState(false)
-
+  
   let categories = document.getElementsByClassName("category")
   let circles = document.getElementsByClassName("category-circle")
-
+  
   const searchFunc = (e) => {
     setQuery(e.target.value);
   };
 
   let filterFunc = (course) => {
-    if (checkbox) {
-      if (certificated){
-        if (category.includes("programming") || category.includes("design") || category.includes("other")) {
-          return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0 && course.certificate
-        }
-        return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0 && course.certificate
+    if (certificated){
+      if (category.includes("programming") || category.includes("design") || category.includes("other")) {
+        if (checkbox) return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0 && course.certificate
+        return course.title.toLowerCase().includes(query.toLowerCase()) && category.toLowerCase().includes(course.category) && course.certificate
       }
-      else if (category.includes("programming") || category.includes("design") || category.includes("other")) {
-        return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0
-      }
-      return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0
-    }
-    else if (category.includes("programming") || category.includes("design") || category.includes("other")) {
-      if (certificated){
-        return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase()) && course.certificate
-      }
-      return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase())
-    }
-    else if (certificated){
+      else if (checkbox) return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0 && course.certificate
       return course.title.toLowerCase().includes(query.toLowerCase()) && course.certificate
     }
-    return course.title.toLowerCase().includes(query.toLowerCase())
+    else if (category.includes("programming") || category.includes("design") || category.includes("other")) {
+      if (checkbox) return course.title.toLowerCase().includes(query.toLowerCase()) && category.toLowerCase().includes(course.category) && course.price == 0
+      return category.toLowerCase().includes(course.category) && course.title.toLowerCase().includes(query.toLowerCase())
+    }
+    else if (checkbox) return course.title.toLowerCase().includes(query.toLowerCase()) && course.price == 0
+    else return course.title.toLowerCase().includes(query.toLowerCase())
   }
 
   const filteredCourses = courses.filter(filterFunc);
